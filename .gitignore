@@ -10,3 +10,6 @@
 /vendor/
 /bin/
 /composer.phar
+/src/Sapiens/Bundle/CoreBundle/Resources/private/vendor/*
+/.project
+/.settings/*

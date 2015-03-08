@@ -7,7 +7,7 @@
 * WAMP / MAMP
 * NodeJS
   * GruntJS
-  * Bower: 'npm install -g bower'
+  * Bower
 * Ruby
   * SASS
 
@@ -20,6 +20,15 @@
 * 'php app/console dotrine:migration:diff'
 * 'php app/console doctrine:migration:migrate'
 * importer 'dump_bdd.sql' dans la base
+
+* ajouter dans le hosts '127.0.0.1 angular-formation.local'
+* ajouter vhost: '<VirtualHost *:80>
+    DocumentRoot "C:\wamp\www\formation-angular-app-starter"
+    ServerName angular-formation.local
+    <Directory />
+        Require all granted
+    </Directory>
+</VirtualHost>'
 
 Vous avez une application Symfony2 initiale avec les entités 'user' (id: angular, pwd: angular) et 'post' (plusieurs déjà en base).
 

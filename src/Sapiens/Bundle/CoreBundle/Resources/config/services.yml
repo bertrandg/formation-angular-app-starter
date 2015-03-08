@@ -1,0 +1,4 @@
+services:
+#    sapiens_core.example:
+#        class: Sapiens\Bundle\CoreBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        {% block stylesheets %}
+        
+            {% stylesheets filter='cssrewrite'
+                '@SapiensCoreBundle/Resources/private/vendor/bootstrap/dist/css/bootstrap.min.css'
+            %}
+                <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+            {% endstylesheets %}
+            
+        {% endblock %}
+        
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    
+    <body>
+        {% block body_start %}
+            {{ include('SapiensCoreBundle:Common:navbar.html.twig') }}
+        {% endblock body_start %}
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% block body_content %}
+                    {% endblock body_content %}
+                </div>
+            </div>
+        </div>
+        
+        {% block javascripts %}
+        
+            {% javascripts 
+                '@SapiensCoreBundle/Resources/private/vendor/jquery/dist/jquery.min.js' 
+                '@SapiensCoreBundle/Resources/private/vendor/bootstrap/dist/js/bootstrap.min.js' 
+            %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        
+        {% endblock %}
+    </body>
+</html>

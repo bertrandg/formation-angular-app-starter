@@ -1,3 +1,8 @@
-app:
-    resource: @AppBundle/Controller/
-    type:     annotation
+
+
+sapiens_core:
+    resource: "@SapiensCoreBundle/Resources/config/routing.yml"
+    prefix: /
+    
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
