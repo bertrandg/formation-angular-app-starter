@@ -4,6 +4,7 @@ namespace Sapiens\Bundle\CoreBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -19,16 +20,20 @@ class Post
     protected $id;
 
     /**
-     * @ORM\Title
-     * @ORM\Column(type="text")
+     * @ORM\Column(name="title", type="string", nullable=false)
+     * 
+     * @Assert\Type(type="string")
+     * @Assert\Length(max=100)
      */
-    protected $title;
+    protected $title = '';
 
     /**
-     * @ORM\Description
-     * @ORM\Column(type="text")
+     * @ORM\Column(name="description", type="text", nullable=false)
+     * 
+     * @Assert\Type(type="string")
+     * @Assert\Length(max=5000)
      */
-    protected $description;
+    protected $description = '';
     
     
     public function __construct()

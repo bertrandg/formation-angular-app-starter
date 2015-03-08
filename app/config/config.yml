@@ -4,8 +4,8 @@ imports:
     - { resource: services.yml }
 
 framework:
-    #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    #esi:            ~
+    translator:      ~
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -76,6 +76,9 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: Sapiens\Bundle\CoreBundle\Entity\User
+    registration:
+        confirmation:
+            enabled: false
 
 
 
