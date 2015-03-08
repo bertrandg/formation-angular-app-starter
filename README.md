@@ -13,7 +13,8 @@
 
 ## Initialisation:
 
-* 'git checkout https://github.com/bertrandg/formation-angular-app-starter.git'
+* 'git clone https://github.com/bertrandg/formation-angular-app-starter.git'
+* 'cd formation-angular-app-starter'
 * 'php composer.phar update'
 * 'php app/console doctrine:database:create'
 * 'php app/console dotrine:migration:diff'
